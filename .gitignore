@@ -1,0 +1,31 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Secrets & Environment
+.env
+.env.*
+!.env.example
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+
+# Node / Web
+node_modules/
+dist/
+build/
+
+# Subtitle & Media Temp Files
+subtitles/
+*.vtt
+*.mp4
+*.m4a
+*.mp3
+temp_sub.*
+
+# Logs & Temp
+*.log
+tmp/

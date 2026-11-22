@@ -83,8 +83,8 @@ ai agent學習ai agent/
 - [x] 執行 `download_all_subs.py` 補齊所有最新影片字幕逐字稿至 `Clipping/`
 
 ### Phase 3：知識庫結構化與應用
+- [x] 設定 GitHub 遠端倉庫（`https://github.com/XiaoYuO3O/ai-agent-learning`）並完成版控整合與推送
 - [ ] 消化 `Clipping/` 逐字稿，於 `知識庫/` 建立主題分類筆記、`Index.md` 與 `Log.md`
-- [ ] 設定 GitHub 遠端倉庫（`XiaoYuO3O`）並同步推送
 - [ ] 結合知識庫內容進行 AI Agent 實戰練習
 
 ---
@@ -105,3 +105,4 @@ ai agent學習ai agent/
 | 2026-11-22 | 全域設定 | 將全域 `GEMINI.md` 移至 `/Users/carol/Downloads/ai agent/GEMINI.md`（保留 `~/.gemini/GEMINI.md` 符號連結），新增繁體中文與 GitHub `XiaoYuO3O` 設定，並建立 `init-project`、`start-work`、`end-work` 三個全域 Skills |
 | 2026-11-22 | 知識庫更新 | 複製並執行 `sensebar-agent-knowledge-vault-builder`，掃描 551 支影片、篩選 113 支 AI 影片，新下載 20 份字幕逐字稿至 `Clipping/` |
 | 2026-11-22 | 收工盤點 | 更新 `Antigravity.md` 進度與下一步，完成本地 Git 初始化與版本提交 |
+| 2026-11-22 | 版控與遠端同步 | 整合 `sensebar-agent-knowledge-vault-builder` 至單一 Git 倉庫，自動建立並推送至 `https://github.com/XiaoYuO3O/ai-agent-learning` |

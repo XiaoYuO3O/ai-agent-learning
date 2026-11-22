@@ -22,19 +22,21 @@
 ### 上次進度（2026-11-22）
 1. **專案與全域規則建置**：
    - 建立專案工作藍圖 `Antigravity.md` 與 `.gitignore`，並初始化 Git 版本控制。
-   - 建立全域規則檔 `/Users/carol/Downloads/ai agent/GEMINI.md`（透過 `~/.gemini/GEMINI.md` 符號連結套用至全機），設定語言偏好為**繁體中文**、GitHub 帳號為 `XiaoYuO3O`。
-2. **全域 Skills 建立**（存放於 `~/.gemini/config/skills/`）：
-   - `init-project`（觸發詞：初始化專案／專案初始化）
+   - 建立全域規則檔 `/Users/carol/Downloads/ai agent/GEMINI.md`（透過 `~/.gemini/GEMINI.md` 符號連結套用至全機），設定語言偏好為**繁體中文**、GitHub 帳號為 `XiaoYuO3O`，並設定本機全域 Git 作者資訊。
+2. **全域 Skills 建立與自動化升級**（存放於 `~/.gemini/config/skills/`）：
+   - `init-project`（觸發詞：初始化專案／專案初始化）：已升級為自動讀取全域 `GEMINI.md` 中的 GitHub 帳號 `XiaoYuO3O`，完成 `antigravity.md`、`.gitignore`、`git init`、首次 commit、自動透過 GitHub API 建立遠端倉庫、綁定 `origin` 並執行首次 `git push -u origin main`。
    - `start-work`（觸發詞：開工／我來了／上次做到哪／我們繼續／接下來）
    - `end-work`（觸發詞：收工／下班／同步／換電腦繼續做）
 3. **三師爸 AI Agent 知識庫建置（`sensebar-agent-knowledge-vault-builder/`）**：
    - 執行 `extract_videos.py`：掃描 `@sensebar` 頻道共 551 支影片／直播，篩選出 **113 支** AI Agent 相關影片，更新 `sensebar_ai_videos.md`、`sensebar_all_videos.md` 與 `sensebar_ai_urls.txt`。
    - 執行 `download_all_subs.py`（使用 `uv` Python 3.12 + 最新 `yt-dlp`）：完成 `Clipping/` 共 **113 份** `.md` 逐字稿（新下載並清理 20 份、已存在跳過 88 份、無字幕佔位 5 份）。
+4. **版控結構整合與 GitHub 遠端同步**：
+   - 移除 `sensebar-agent-knowledge-vault-builder/` 內嵌的 `.git`，將整個專案與三層知識庫整併為單一 Git 倉庫統一管理。
+   - 自動建立 GitHub 遠端倉庫 `https://github.com/XiaoYuO3O/ai-agent-learning`，綁定 `origin` 並完成 `main` 分支同步推送。
 
 ### 下一步待辦（Next Steps）
 1. **知識庫結構化整理**：掃描 `sensebar-agent-knowledge-vault-builder/Clipping/` 內的 113 份逐字稿，提取摘要、關鍵字與主題，寫入 `知識庫/`（包含 `Index.md` 與 `Log.md`）。
-2. **設定 GitHub 遠端倉庫**：在 GitHub（帳號 `XiaoYuO3O`）建立對應遠端 repo 並綁定 `git remote add origin`，完成首次遠端推送。
-3. **運用知識庫學習與實作**：透過整理好的三師爸 AI Agent 知識庫，進行後續 AI Agent 專案實作。
+2. **運用知識庫學習與實作**：透過整理好的三師爸 AI Agent 知識庫，進行後續 AI Agent 專案實作與查詢。
 
 ---
 
@@ -106,3 +108,4 @@ ai agent學習ai agent/
 | 2026-11-22 | 知識庫更新 | 複製並執行 `sensebar-agent-knowledge-vault-builder`，掃描 551 支影片、篩選 113 支 AI 影片，新下載 20 份字幕逐字稿至 `Clipping/` |
 | 2026-11-22 | 收工盤點 | 更新 `Antigravity.md` 進度與下一步，完成本地 Git 初始化與版本提交 |
 | 2026-11-22 | 版控與遠端同步 | 整合 `sensebar-agent-knowledge-vault-builder` 至單一 Git 倉庫，自動建立並推送至 `https://github.com/XiaoYuO3O/ai-agent-learning` |
+| 2026-11-22 | 全域 Skill 升級與收工 | 升級 `init-project` 為自動讀取全域 GitHub 帳號、自動建庫、綁定 `origin` 與首次 `push`；更新 `Antigravity.md` 並推送收工進度 |
